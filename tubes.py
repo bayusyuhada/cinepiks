@@ -134,6 +134,7 @@ def login_page():
 
     if st.button('Login'):
         if nama_pengguna == "user" and password == "password":  
+            st.balloons()
             st.success(f'Selamat datang, {nama_pengguna}! Anda berhasil login.')
             st.session_state.nama_pengguna = nama_pengguna
             st.rerun()
@@ -154,7 +155,6 @@ def welcome_page():
 
     # Display the recommended movies with release years
         st.write(f"We recommend movies released between {min_year} and {max_year}:")
-        st.balloons()
         for movie in recommended_movies:
             title = movie["title"]
             year = movie["year"]
