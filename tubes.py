@@ -129,12 +129,13 @@ def main():
 def login_page():
     # Set the title of the web app
     st.title("Movie Recommendation App")
+    st.balloons()
     nama_pengguna = st.text_input('Nama Pengguna')
     password = st.text_input('Password', type='password')
 
     if st.button('Login'):
         if nama_pengguna == "user" and password == "password":  
-            st.balloons()
+            
             st.success(f'Selamat datang, {nama_pengguna}! Anda berhasil login.')
             st.session_state.nama_pengguna = nama_pengguna
             st.rerun()
